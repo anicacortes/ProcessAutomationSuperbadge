@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Leads_outside_US</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(LEN(State) = 2
+&amp;&amp; 
+(Country = &apos;US&apos; || Country = &apos;USA&apos; || Country = &apos;United States&apos; || Country = &apos;&apos;))</errorConditionFormula>
+    <errorMessage>Lead can&apos;t be created because it&apos;s outside of USA</errorMessage>
+</ValidationRule>
